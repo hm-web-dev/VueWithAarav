@@ -1,15 +1,22 @@
 <script>
+import Header from '../Header.vue'
+import Footer from '../Footer.vue'
 export default {
     data() {
         return {
             description: "Made in Bergen.",
             copy: "This is copy. It's a string. Paragraph paragraph paragraph.",
         }
+    }, 
+    components: {
+        Header,
+        Footer
     }
 }
 </script>
 
 <template>
+    <Header></Header>
     <div class="backgroundWithImage">
         <div class="description">
             <p>Careers</p>
@@ -19,6 +26,7 @@ export default {
     <div>
         {{ copy }}
     </div>
+    <Footer></Footer>
 </template>
 
 <style scoped>
@@ -36,7 +44,8 @@ export default {
     -webkit-box-pack: center;
     justify-content: center;
     max-width: min(80%, 940px);
-    height: calc(-150px + 100vh);
+    height: calc(-50px + 100vh);
+    margin: 0 auto; /* auto-center */ 
 }
 .description * {
     margin: 0;

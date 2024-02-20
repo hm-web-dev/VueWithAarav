@@ -1,5 +1,4 @@
 <script>
-import TimeStamp from './TimeStamp.vue';
 import NewsItemFooter from './NewsItemFooter.vue';
 export default {
     props: {
@@ -13,7 +12,7 @@ export default {
             pageURL: String
         }
     },
-    components: { TimeStamp, NewsItemFooter }
+    components: { NewsItemFooter }
 }
 </script>
 

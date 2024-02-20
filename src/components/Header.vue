@@ -1,3 +1,15 @@
+<script>
+import Dropdown from './widgets/Dropdown.vue';
+export default {
+    data() {
+        return {
+            options: ['Company', 'Careers']
+        }
+    },
+    components: { Dropdown }
+}
+</script>
+
 <template>
     <div class="header-topbar">
         <a href="/">
@@ -6,7 +18,8 @@
         <input type="text" placeholder="Search" value="">
         <div class="header-links">
             <a href="/news">News</a>
-            <a href="/about us">About Us</a>
+            <Dropdown :options="options" text="About Us">
+            </Dropdown>
         </div>
     </div>
 </template>
@@ -32,6 +45,8 @@ input {
 }
 
 .header-topbar {
+    margin: 0;
+    z-index: 1000;
     position: sticky;
     top: 0px;
     left: 0px;

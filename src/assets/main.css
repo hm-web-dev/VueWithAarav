@@ -15,17 +15,12 @@ a {
 }
 
 h1 {
+  font-size: 4rem;
   color: var(--color-heading);
 }
 
 @media (hover: hover) {
   a:hover {
     opacity: 60%;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
   }
 }
