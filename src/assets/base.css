@@ -1,3 +1,9 @@
+/* font from fotmob */
+@font-face {
+  font-family: GTWalsheim-Rg;
+  src: url('./GT-Walsheim-Regular.woff2');
+}
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
@@ -19,11 +25,8 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-}
 
 /* semantic color variables for this project */
-:root {
-  --GlobalColorScheme-Logo-color: var(--vt-c-white); /* from fotmob */
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
@@ -31,8 +34,8 @@
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-light-2);
 
   --section-gap: 160px;
 }
@@ -51,16 +54,8 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
-
 body {
-  font-family: GTWalsheim-Rg, GTWalsheim-Md, Rubik, system, Arial, sans-serif;
+  font-family: GTWalsheim-Rg, GTWalsheim-Md, Rubik, Arial, sans-serif;
   font-weight: normal;
   font-feature-settings: "ss01";
   box-sizing: border-box;

@@ -5,31 +5,27 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  color: var(--color-text);
 }
 
-a,
-.green {
+a {
+  color: var(--color-heading);
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  transition: opacity 0.5s;
+}
+
+h1 {
+  color: var(--color-heading);
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    opacity: 60%;
   }
 }
 
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }
