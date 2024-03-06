@@ -106,7 +106,7 @@ export default {
     /* needs to also specify child to resize */
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:scale-down;
 }
 .featuredArticleText {
     display: flex;
@@ -121,6 +121,7 @@ export default {
     gap: 24px;
     padding: 20px;
 }
+
 .articleGrid {
     margin-top: 48px;
     padding: 0px 30px;

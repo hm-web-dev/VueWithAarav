@@ -9,9 +9,9 @@
         </div>
         <div>Fotmob is the essential football app.</div>
         <div class="footer-links">
-            <a href="/matches">Matches</a>
-            <a href="/news">News</a>
-            <a href="/about us">About Us</a>
+            <a href="/#/matches">Matches</a>
+            <a href="/#/news">News</a>
+            <a href="/#/about us">About Us</a>
         </div>
         <div> <a href="https://apps.apple.com/us/app/fotmob-soccer-live-scores/id488575683">Get the App</a> </div>
     </div>
