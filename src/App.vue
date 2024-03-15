@@ -11,12 +11,11 @@ import Cart from './components/pages/Cart.vue'
 // 1. create a routes object with all your navbar routes
 // see https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch
 const routes = {
-  '/': null,
+  '/': Matches,
   '/news': News,
   '/about': AboutUs,
   '/home': Home,
   '/cart': Cart,
-  '/matches': Matches,
 
 }
 export default {

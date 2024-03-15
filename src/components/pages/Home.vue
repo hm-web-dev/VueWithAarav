@@ -1,4 +1,4 @@
-<script>
+  <script>
 import Header from '../Header.vue'
 import Footer from '../Footer.vue'
 

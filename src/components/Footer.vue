@@ -22,7 +22,7 @@
     display: flex;
     height: 80px;
     width: 100%;
-    background: var(--color-background-soft);
+    background-color: rgb(236, 94, 177);
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;

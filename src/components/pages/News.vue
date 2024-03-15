@@ -1,7 +1,23 @@
+<template>
+    <div class="newsbox">
+        <header class="WorldNewsHeader">
+            <h1>World News</h1>
+        </header>
+        <div class="layout">
+            <div class="featuredArticle" @click="loadMoreArticles">
+                <!-- Featured article content -->
+            </div>
+            <div class="articleGrid">
+                <NewsItem v-for="article in articles" :newsItem="article" :key="article.title" />
+            </div>
+        </div>
+        <button @click="loadMoreArticles" class="load-more-button">Load More Articles</button>
+    </div>
+</template>
+
 <script>
 import NewsItem from "../widgets/NewsItem.vue";
-import NewsItemFooter from "../widgets/NewsItemFooter.vue";
-import TimeStamp from "../widgets/TimeStamp.vue";
+
 export default {
     data() {
         return {
@@ -15,7 +31,7 @@ export default {
                 pageURL: "https://www.fotmob.com/news/138lzxhk8mmsi1nflku3xemdte-inter-boss-simone-inzaghi-reveals-admiration-diego-simeone-ahead-clash"
             },
             articles: [
-                {
+            {
                     imageUrl: "https://images2.minutemediacdn.com/image/upload/c_crop,w_7033,h_3956,x_0,y_132/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01hqxbvkpj6py3em8f47.jpg",
                     title: "Chelsea keen to replace Marc Cucurella with £15m Englishman - report",
                     gmtTime: "2024-03-01T18:18:00.000Z",
@@ -50,40 +66,104 @@ export default {
                     lead: "AC Milan forward Rafael Leao has insisted he does not plan on leaving the club in the foreseeable future, despite reports of interest from both Chelsea and Paris Saint-Germain.",
                     sourceIconUrl: "https://images.fotmob.com/image_resources/news/fotmob.png",
                     pageURL: "https://www.fotmob.com/embed/news/01hr4g5xs6dm/rafael-leao-definitive-response-chelsea-psg-transfer"
-                },
-            ],
+                },           
+             ]
         }
     },
     components: {
         NewsItem,
-        TimeStamp, 
-        NewsItemFooter
+    },
+    methods: {
+        loadMoreArticles() {
+            // Here you can add new articles
+            this.articles.push(
+                {
+        imageUrl: "https://images2.minutemediacdn.com/image/upload/c_crop,w_1566,h_880,x_0,y_36/c_fill,w_2160,ar_16:9,f_auto,q_auto,g_auto/images%2FvoltaxMediaLibrary%2Fmmsport%2F90min_en_international_web%2F01hqqjyccm1peyq227pt.png",
+        title: "INEOS Man Utd didnt consider signing Tino Livramento",
+        gmtTime: "2024-02-28T06:30:00.000Z",
+        source: "FotMob",
+        lead: "New Manchester United shareholders INEOS were surprised the club did not make a play to sign Tino Livramento before his move to Newcastle United last summer, 90min understands.",
+        sourceIconUrl: "https://images2.minutemediacdn.com/image/upload/c_crop,w_1566,h_880,x_0,y_36/c_fill,w_2160,ar_16:9,f_auto,q_auto,g_auto/images%2FvoltaxMediaLibrary%2Fmmsport%2F90min_en_international_web%2F01hqqjyccm1peyq227pt.png",
+        pageURL: "https://www.fotmob.com/embed/news/01hqqjtz8s30/ineos-surprised-man-utd-didnt-consider-signing-tino"
+    },
+    {
+        imageUrl: "https://images.performgroup.com/di/library/omnisport/5b/98/2_72303704.jpg?t=-193833667&w=1200&h=630",
+        title: "Newcastle United co-owner challenges £36m bankruptcy petition in court",
+        gmtTime: "2024-02-19T12:48:00.000Z",
+        source: "FotMob",
+        lead: "Amanda Staveley asked the Insolvency and Companies Court to set aside a demand served by Victor Restis in May last year.",
+        sourceIconUrl: "https://images.performgroup.com/di/library/omnisport/5b/98/2_72303704.jpg?t=-193833667&w=1200&h=630",
+        pageURL: "https://www.fotmob.com/news/xj9v4rc16un1va0zrsbcdh5z-newcastle-united-co-owner-challenges-36m-bankruptcy-petition-court"
+     },
+    {
+        imageUrl: "https://images.performgroup.com/di/library/omnisport/8d/8/2_75440707.jpg?t=-220835411&w=1200&h=630",
+        title: "Pep Guardiola hails 'unbelievable' Erling Haaland goalscoring record",
+        gmtTime: "2024-02-19T12:47:00.000Z",
+        source: "FotMob",
+        lead: "Amanda Staveley asked the Insolvency and Companies Court to set aside a demand served by Victor Restis in May last year.",
+        sourceIconUrl: "https://images.performgroup.com/di/library/omnisport/8d/8/2_75440707.jpg?t=-220835411&w=1200&h=630",
+        pageURL: "https://www.fotmob.com/news/1iutcondqtpkv1py3odlsynnnf-pep-guardiola-hails-unbelievable-erling-haaland-goalscoring-record",
+    },
+    {
+        imageUrl: "https://latest.fotmob.com/wp-content/uploads/2024/02/Covers_This-Is-Anfield-2802-1.png",
+        title: "Liverpools kids show the future really is bright after Jurgen Klopp",
+        gmtTime: "2024-02-19T03:34:00.000Z",
+        source: "FotMob",
+        lead: "When Jürgen Klopp first arrived at Liverpool he spoke of his intention to use the club’s under-23s side similarly to the way European sides in Germany and Spain have second teams.",
+        sourceIconUrl: "https://latest.fotmob.com/wp-content/uploads/2024/02/Covers_This-Is-Anfield-2802-1.png",
+        pageURL: "https://www.fotmob.com/topnews/10444-liverpools-kids-show-future-really-is-bright-after-jurgen-klopp?utm_source=fotmob"
+    },
+    {
+        imageUrl: "https://static01.nyt.com/images/2024/02/27/multimedia/27meyer-01-vptw/27meyer-01-vptw-superJumbo.jpg?quality=75&auto=webp",
+        title: "GM and Ford Are Going Electric. Why Are They Making Their Own Batteries?",
+        gmtTime: "2024-03-09T20:04:27.000Z",
+        source: "NewYorkTimes",
+        lead: "Simone Inzaghi and Diego Simeone, now boss of Atletico Madrid, helped Lazio win Serie A as players in 2000.",
+        sourceIconUrl: "https://images.fotmob.com/image_resources/news/fotmob.png",
+        pageURL: "https://www.nytimes.com/2024/02/27/opinion/gm-ford-electric-vehicles.html"
+    },
+    {
+        imageUrl: "https://static01.nyt.com/images/2024/02/26/multimedia/26safina1-zbvl/26safina1-zbvl-superJumbo.jpg?quality=75&auto=webp",
+        title: "The Death of a Flaco Owl",
+        gmtTime: "2024-03-09T20:04:27.000Z",
+        source: "FotMob",
+        lead: "Simone Inzaghi and Diego Simeone, now boss of Atletico Madrid, helped Lazio win Serie A as players in 2000.",
+        sourceIconUrl: "https://images.fotmob.com/image_resources/news/fotmob.png",
+        pageURL: "https://www.nytimes.com/2024/02/26/opinion/flaco-owl-death-birds.html"
+    },
+    {
+        imageUrl: "https://paidpost-assets.nyt.com/static/100000009269110/images/img_5.jpg",
+        title: "The Guardians of Japan’s Keyhole Tombs",
+        gmtTime: "2024-03-09T20:04:27.000Z",
+        source: "FotMob",
+        lead: "Simone Inzaghi and Diego Simeone, now boss of Atletico Madrid, helped Lazio win Serie A as players in 2000.",
+        sourceIconUrl: "https://images.fotmob.com/image_resources/news/fotmob.png",
+        pageURL: "https://www.nytimes.com/paidpost/mozu-furuichi-kofun-group/the-guardians-of-japans-keyhole-tombs.html?cpv_ap_id=50582857&utm_campaign=morein&tbs_nyt=2024-jan-nytnative_morein"
+    },
+    {
+        imageUrl: "https://images.performgroup.com/di/library/omnisport/79/d8/6c9b4b26f64a40ea89b7f69ccd088d40.jpg?t=-955230179&w=640",
+        title: "Github Copilot: The AI tool that writes your code for you",
+        gmtTime: "2024-03-09T20:04:27.000Z",
+        source: "FotMob",
+        lead: "Simone Inzaghi and Diego Simeone, now boss of Atletico Madrid, helped Lazio win Serie A as players in 2000.",
+        sourceIconUrl: "https://images.fotmob.com/image_resources/news/fotmob.png",
+        pageURL: "https://www.fotmob.com/news/138lzxhk8mmsi1nflku3xemdte-inter-boss-simone-inzaghi-reveals-admiration-diego-simeone-ahead-clash"
+    },
+            );
+        }
     }
 }
 </script>
 
-<template>
-    <header class="WorldNewsHeader">
-        <h1>World News</h1>
-    </header>
-    <div class="layout">
-        <div class="featuredArticle">
-            <div class="featuredImage">
-                <img :src="featuredArticle.imageUrl" alt="featured article image" />
-            </div>
-            <div class="featuredArticleText">
-                <h3>{{ featuredArticle.title }}</h3>
-                <NewsItemFooter :article="featuredArticle" />
-            </div>
-        </div>
-        <div class="articleGrid">
-            <NewsItem v-for="article in articles" :newsItem="article" :key="article.title" />
-        </div>
-    </div>
-</template>
-
 <style scoped>
-.WorldNewsHeader {
+.newsbox {
+    padding: 10px; 
+    background-color: rgb(255, 230, 205);
+}
+
+.WorldNewsHeader h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
     display: flex;
     -webkit-box-align: center;
     align-items: center;

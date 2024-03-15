@@ -4,17 +4,18 @@ import Footer from '../Footer.vue'
 
 </script>
 
+
 <style scoped>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #ffffff;
       color: #333;
     }
 
     header {
-      background-color: #2c3e50;
+      background-color: #3f3d30;
       color: #ecf0f1;
       text-align: center;
       padding: 1em 0;
@@ -69,7 +70,7 @@ import Footer from '../Footer.vue'
     }
 
     .cart-actions a {
-      background-color: #3498db;
+      background-color: #878786;
       color: #fff;
       text-decoration: none;
       padding: 10px 20px;
@@ -78,12 +79,12 @@ import Footer from '../Footer.vue'
     }
 
     .cart-actions a:hover {
-      background-color: #2980b9;
+      background-color: #9c7729;
     }
 </style>
 <template>
     <header>
-    <h1>FootMob Shop</h1>
+    <h1>FOTMOB Shop</h1>
   </header>
     <div class="cart-item">
       <img src="https://pbs.twimg.com/media/EW8DRS3WsAY4gIT.jpg" alt="Product 1">
